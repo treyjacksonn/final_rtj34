@@ -8,6 +8,8 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using final_rtj34.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace final_rtj34
 {
@@ -25,10 +27,10 @@ namespace final_rtj34
         {
             services.AddControllersWithViews();
 
-            //services.AddDbContext<EntertainerContext>(options =>
-            //{
-            //    options.UseSqlite(Configuration["ConnectionStrings:BookstoreDBConnection"]);
-            //});
+            services.AddDbContext<EntertainerContext>(options =>
+            {
+                options.UseSqlite(Configuration["ConnectionStrings:EntertainerDBConnection"]);
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

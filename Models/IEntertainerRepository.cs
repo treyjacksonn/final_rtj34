@@ -5,7 +5,9 @@ using System.Threading.Tasks;
 
 namespace final_rtj34.Models
 {
-    public class IEntertainerRepository
+    public interface IEntertainerRepository
     {
+            IQueryable<Entertainer> Entertainers { get; }
+      
     }
 }
