@@ -35,10 +35,30 @@ namespace final_rtj34.Controllers
             return View(ent);
         }
 
+        [HttpGet]
         public IActionResult Add()
         {
             return View();
         }
+
+        [HttpPost]
+        public IActionResult Add(Entertainer ent)
+        {
+            if (ModelState.IsValid)
+            {
+                EntContext.Add(ent);
+                EntContext.SaveChanges();
+                return Redirect("List");
+
+
+            }
+            else
+            {
+                return Redirect("Add");
+            }
+
+        }
+
 
         [HttpGet]
         public IActionResult Details(int entertainerID)
@@ -55,6 +75,16 @@ namespace final_rtj34.Controllers
                 .Single(x => x.EntertainerID == entertainerID);
             return View("Edit",entry);
         }
+
+        [HttpPost]
+        public IActionResult Delete(int entertainerID)
+        {
+            var entry = EntContext.Entertainers
+                  .Single(x => x.EntertainerID == entertainerID);
+            return View("Delete", entry);
+
+        }
+
 
         //[HttpPost]
         //public IActionResult Edit(Entertainer ent)

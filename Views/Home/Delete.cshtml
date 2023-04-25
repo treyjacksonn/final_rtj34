@@ -1,3 +1,16 @@
 ﻿@{
     ViewData["Title"] = "Delete Entry";
 }
+
+@model Entertainer
+<h2>Confirm Deletion</h2>
+<h3>Are you sure you want to delete the entry for @Model.EntStageName?</h3>
+
+<!--Post method to call for the deletion of an entry-->
+<form method="post" asp-action="Delete">
+    <button type="submit">Delete</button>
+    <a asp-controller="Home" asp-action="List" class="btn btn-primary">Cancel</a>
+
+    <!--hidden attribute to pass the MovieID to the post of the Delete Function-->
+    <input type="hidden" asp-for="EntertainerID" />
+</form>
