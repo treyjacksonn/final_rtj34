@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.33529.622
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "final_rtj34", "final_rtj34.csproj", "{1ED0FCD2-B751-4816-8E35-3DF7C094FA0E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1ED0FCD2-B751-4816-8E35-3DF7C094FA0E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1ED0FCD2-B751-4816-8E35-3DF7C094FA0E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1ED0FCD2-B751-4816-8E35-3DF7C094FA0E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1ED0FCD2-B751-4816-8E35-3DF7C094FA0E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2CF4F4FC-C09F-48EE-A3D2-1E3B245FA5BF}
+	EndGlobalSection
+EndGlobal

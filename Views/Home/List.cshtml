@@ -1,0 +1,30 @@
+﻿
+@{
+    ViewData["Title"] = "List Display";
+}
+<h1>Put List here</h1>
+<table class="table table-bordered table-striped">
+    <thead class="font-weight-bold">
+        <tr>
+        </tr>
+    </thead>
+
+    <tbody>
+        <!--foreach loop iterates through all the attributes in the model and displays them-->
+        @*@foreach (var x in Model)*@
+        {
+        <tr>
+
+
+            <!--asp-route-movieid connect the MovieID to the entry that is clicked-->
+            <td><a asp-controller="Home" asp-action="Edit">Edit</a> </td>
+            <td><a asp-controller="Home" asp-action="Add">Add</a> </td>
+
+            @*asp-route-movieid="@x.MovieID">Delete</a>*@
+            @*asp-route-movieid="@x.MovieID">*@
+
+        </tr>
+        }
+
+    </tbody>
+</table>
