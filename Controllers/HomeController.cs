@@ -68,21 +68,35 @@ namespace final_rtj34.Controllers
 
             return View("Details",entry);
         }
-        [HttpPost]
+        [HttpGet]
         public IActionResult Edit(int entertainerID)
         {
             var entry = EntContext.Entertainers
                 .Single(x => x.EntertainerID == entertainerID);
             return View("Edit",entry);
         }
-
         [HttpPost]
+        public IActionResult Edit(Entertainer ent)
+        {
+            EntContext.Update(ent);
+            EntContext.SaveChanges();
+            return Redirect("List");
+        }
+
+        [HttpGet]
         public IActionResult Delete(int entertainerID)
         {
             var entry = EntContext.Entertainers
                   .Single(x => x.EntertainerID == entertainerID);
             return View("Delete", entry);
 
+        }
+        [HttpPost]
+        public IActionResult Delete(Entertainer ent)
+        {
+            EntContext.Entertainers.Remove(ent);
+            EntContext.SaveChanges();
+            return Redirect("List");
         }
 
 

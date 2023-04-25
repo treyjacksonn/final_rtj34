@@ -35,12 +35,12 @@
         }
     </tbody>
 </table>
-<form method="post" asp-action="Edit" asp-route-entertainerID="@Model.EntertainerID">
-    <button type="submit">Edit?</button>
+<form method="get">
+    <button type="submit"><a asp-controller="Home" asp-action="Edit" asp-route-entertainerID="@Model.EntertainerID">Edit</a></button>
     <!--hidden attribute to pass the MovieID to the post of the Delete Function-->
 </form>
-<form method="post" asp-action="Delete" asp-route-entertainerID="@Model.EntertainerID">
-    <button type="submit">Delete?</button>
+<form method="get">
+    <button type="submit"><a asp-controller="Home" asp-action="Delete" asp-route-entertainerID="@Model.EntertainerID">Delete</a></button>
     <!--hidden attribute to pass the MovieID to the post of the Delete Function-->
 </form>
 <form method="post" asp-action="List">

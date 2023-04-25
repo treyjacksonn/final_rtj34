@@ -41,3 +41,6 @@
      <input type="submit" value="Edit Entertainer" /> <br />
 
  </form>
+ <form asp-action="Details" method="get">
+     <button><a asp-controller="Home" asp-action="Details" asp-route-entertainerID="@Model.EntertainerID">Back</a></button>
+ </form>
