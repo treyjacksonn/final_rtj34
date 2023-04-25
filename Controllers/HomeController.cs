@@ -40,9 +40,30 @@ namespace final_rtj34.Controllers
             return View();
         }
 
-        public IActionResult Edit()
+        [HttpGet]
+        public IActionResult Details(int entertainerID)
         {
-            return View();
+            var entry = EntContext.Entertainers
+                .Single(x => x.EntertainerID == entertainerID);
+
+            return View("Details",entry);
         }
+        [HttpPost]
+        public IActionResult Edit(int entertainerID)
+        {
+            var entry = EntContext.Entertainers
+                .Single(x => x.EntertainerID == entertainerID);
+            return View("Edit",entry);
+        }
+
+        //[HttpPost]
+        //public IActionResult Edit(Entertainer ent)
+        //{
+        //    EntContext.Update(ent);
+        //    EntContext.SaveChanges();
+        //    return Redirect("List");
+        //}
+
+
     }
 }

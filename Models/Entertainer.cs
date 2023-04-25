@@ -17,7 +17,7 @@ namespace final_rtj34.Models
         public string? EntCity { get; set; }
         public string? EntState { get; set; }
         public int? EntZipCode { get; set; }
-        public int? EntPhoneNumber { get; set; }
+        public string? EntPhoneNumber { get; set; }
         public string? EntWebPage { get; set; }
         public string? EntEMailAddress { get; set; }
         public DateTime? DateEntered { get; set; }

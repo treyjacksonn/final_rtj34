@@ -13,6 +13,7 @@
         <thead class="font-weight-bold">
             <tr>
                 <td>EntStageName</td>
+                <td>More Info</td>
             </tr>
         </thead>
 
@@ -24,8 +25,7 @@
                     <td>@x.EntStageName</td>
 
                     <!--asp-route-movieid connect the MovieID to the entry that is clicked-->
-                    <td><a asp-controller="Home" asp-action="Edit">Edit</a> </td>
-                    <td><a asp-controller="Home" asp-action="Add">Add</a> </td>
+                    <td><a asp-controller="Home" asp-action="Details" asp-route-entertainerID="@x.EntertainerID">Details</a> </td>
 
                     @*asp-route-movieid="@x.MovieID">Delete</a>*@
                     @*asp-route-movieid="@x.MovieID">*@

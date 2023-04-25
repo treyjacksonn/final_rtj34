@@ -1,0 +1,50 @@
+﻿@{
+    ViewData["Title"] = "Details";
+}
+@model Entertainer
+<h1>Entertainer Details</h1>
+<table class="table table-bordered table-striped">
+    <thead class="font-weight-bold">
+        <tr>
+            <td>Stage Name</td>
+            <td>SSN</td>
+            <td>Street Address</td>
+            <td>City</td>
+            <td>State</td>
+            <td>Zip Code</td>
+            <td>Phone Number</td>
+            <td>Web Page</td>
+            <td>Email Address</td>
+        </tr>
+    </thead>
+
+    <tbody>
+        <!--foreach loop iterates through all the attributes in the model and displays them-->
+        {
+        <tr>
+            <td>@Model.EntStageName</td>
+            <td>@Model.EntSSN</td>
+            <td>@Model.EntStreetAddress</td>
+            <td>@Model.EntCity</td>
+            <td>@Model.EntState</td>
+            <td>@Model.EntZipCode</td>
+            <td>@Model.EntPhoneNumber</td>
+            <td>@Model.EntWebPage</td>
+            <td>@Model.EntEMailAddress</td>
+        </tr>
+        }
+    </tbody>
+</table>
+<form method="post" asp-action="Edit" asp-route-entertainerID="@Model.EntertainerID">
+    <button type="submit">Edit?</button>
+    <!--hidden attribute to pass the MovieID to the post of the Delete Function-->
+</form>
+<form method="post" asp-action="Delete" asp-route-entertainerID="@Model.EntertainerID">
+    <button type="submit">Delete?</button>
+    <!--hidden attribute to pass the MovieID to the post of the Delete Function-->
+</form>
+<form method="post" asp-action="List">
+    <button type="submit">Back</button>
+</form>
+
+
